@@ -7,6 +7,7 @@ function setup() {
   weight = random(400, 1500);
   car =createSprite(50, 200, 50, 50);
   wall = createSprite(900, 200, 60, height/2);
+  car.velocityX = 0;
 }
 
 function draw() {
