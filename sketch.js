@@ -25,7 +25,15 @@ function draw() {
   else {
     car.shapeColor = "turquoise";
     wall.shapeColor = (80, 80, 80);
-    car.velocityX = 0;
+    car.velocityX = 0;}
+  if(deformation>180){
+    car.shapeColor = "red";
+  }
+  if(deformation>100&&deformation<180){
+    car.shapeColor = "yellow";
+  }
+  if(deformation<=100){
+    car.shapeColor = "green";
   }
   drawSprites();
 }
