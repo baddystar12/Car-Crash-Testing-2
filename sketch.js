@@ -19,14 +19,10 @@ function draw() {
     wall.x - car.x< car.width/2+wall.width/2&& 
     car.y - wall.y< car.height/2+ wall.height/2&&
     wall.y - car.y < car.height/2+ wall.height/2) {
+    var deformation = 0.5*weight*speed*speed/22500
     car.shapeColor = "royalblue";
     wall.shapeColor = "royalblue";
-  }
-  else {
-    car.shapeColor = "turquoise";
-    wall.shapeColor = (80, 80, 80);
-    car.velocityX = 0;}
-  if(deformation>180){
+    if(deformation>180){
     car.shapeColor = "red";
   }
   if(deformation>100&&deformation<180){
@@ -35,5 +31,11 @@ function draw() {
   if(deformation<=100){
     car.shapeColor = "green";
   }
+  }
+  else {
+    car.shapeColor = "turquoise";
+    wall.shapeColor = (80, 80, 80);
+    car.velocityX = 0;}
+  
   drawSprites();
 }
